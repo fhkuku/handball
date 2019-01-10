@@ -37,10 +37,8 @@ public class splash extends AppCompatActivity {
                 }finally {
                     Intent i = new Intent(getApplicationContext(), menu.class);
                     startActivity(i);
-
                 }
             }
-
         }; timer.start();
 
 

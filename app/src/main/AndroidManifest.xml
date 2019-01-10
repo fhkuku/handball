@@ -12,17 +12,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activitys.menu">
-
-        </activity>
+        <activity android:name=".activitys.menu"></activity>
         <activity
             android:name=".activitys.photos"
             android:label="Photos" />
         <activity android:name=".activitys.videos" />
         <activity
             android:name=".activitys.photo"
-             />
-        <activity android:name=".activitys.club" />
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activitys.club"
+            android:theme="@style/Themeactivity" />
         <activity android:name=".activitys.splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,6 +30,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activitys.dirigeants" android:theme="@style/Themeactivity"></activity>
     </application>
 
 </manifest>

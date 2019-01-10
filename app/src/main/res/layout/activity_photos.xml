@@ -6,8 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/grey"
     android:backgroundTint="#fcfcfc"
-    android:fitsSystemWindows="true"
-
     tools:context=".activitys.menu">
 
     <android.support.design.widget.AppBarLayout
@@ -37,7 +35,7 @@
                 android:id="@+id/toolbarphotos"
                 android:layout_width="match_parent"
                 app:titleTextColor="#fff"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="25dp"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
                 style="@style/ThemeOverlay.AppCompat.Light">

@@ -1,15 +1,14 @@
 package com.handball.classes;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.transition.Fade;
-import android.transition.Slide;
-import android.view.Gravity;
 import android.view.animation.Animation;
-import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
@@ -19,6 +18,7 @@ import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import com.handball.activitys.photo;
+import com.loopj.android.http.RequestParams;
 
 import java.util.HashMap;
 
@@ -28,7 +28,7 @@ public class elements implements BaseSliderView.OnSliderClickListener, ViewPager
     public android.support.v7.widget.Toolbar toolbar;
     public CardView btnphotos, btnvideos, btnclub, btnequipes;
     public RecyclerView rcv;
-    public String Url="http://services.tapiceriasantiago.com.mx/";
+    public String Url="https://gownetwork.com.mx/webservice/";
     public HashMap<String, String> HashMapForURL ;
     public SliderLayout sliderLayout;
     public static final int INTERVALLE = 2000;
@@ -40,7 +40,10 @@ public class elements implements BaseSliderView.OnSliderClickListener, ViewPager
     public ImageView img, imgback;
     public TextView txt;
     public Animation animation;
-
+    public LinearLayout bottom_menu_shared;
+    public FloatingActionButton btnShared;
+    public BottomSheetBehavior behavior;
+    public RequestParams request;
 
 
 
@@ -66,50 +69,6 @@ public class elements implements BaseSliderView.OnSliderClickListener, ViewPager
             e.printStackTrace();
         }
     }
-
-    public void StartAnimation(){
-        try {
-            p = (photo) conext;
-            Fade fade = new Fade(Fade.IN);
-            fade.setDuration(300);
-            fade.setInterpolator(new DecelerateInterpolator());
-            Slide slide = new Slide(Gravity.BOTTOM);
-            slide.setDuration(300);
-            slide.setInterpolator(new DecelerateInterpolator());
-            p.getWindow().setEnterTransition(fade);
-            p.getWindow().setReturnTransition(slide);
-            p.getWindow().setAllowEnterTransitionOverlap(true);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-
-
-    public void Slide(Context c){
-        p =(photo) conext;
-        p.getWindow().setAllowEnterTransitionOverlap(false);
-        Slide slide = new Slide(Gravity.RIGHT);
-        p.getWindow().setReturnTransition(slide);
-
-    }
-
-    public void Photos(){
-        try {
-            p = (photo) conext;
-            Fade fade = new Fade(Fade.IN);
-            fade.setDuration(300);
-            fade.setInterpolator(new DecelerateInterpolator());
-            Slide slide = new Slide(Gravity.BOTTOM);
-            slide.setDuration(300);
-            slide.setInterpolator(new DecelerateInterpolator());
-            p.getWindow().setEnterTransition(fade);
-            p.getWindow().setReturnTransition(slide);
-            p.getWindow().setAllowEnterTransitionOverlap(true);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-
 
     @Override
     public void onSliderClick(BaseSliderView slider) {

@@ -2,9 +2,6 @@ package com.handball.activitys;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-
 import com.handball.R;
 import com.handball.classes.activitys;
 import com.handball.classes.elements;
@@ -23,8 +20,6 @@ public class menu extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        Window w = getWindow();
-        w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         e.sliderLayout = findViewById(R.id.slider);
         e.conext = this;
         A.context = this;
@@ -73,6 +68,7 @@ public class menu extends AppCompatActivity  {
             e.showMensaje("erreur");
         }
     }
+
 
 
 }
