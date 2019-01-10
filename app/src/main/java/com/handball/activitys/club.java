@@ -1,9 +1,8 @@
 package com.handball.activitys;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Window;
-import android.view.WindowManager;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.handball.R;
 import com.handball.classes.elements;
@@ -19,6 +18,8 @@ public class club extends AppCompatActivity {
         setContentView(R.layout.activity_club);
         e.conext = this;
         r.cl = this;
+        e.img = findViewById(R.id.imgerror);
+        e.img.setVisibility(View.INVISIBLE);
         r.GetClub();
 
 

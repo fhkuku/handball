@@ -1,7 +1,7 @@
 package com.handball.activitys;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.handball.R;
 import com.handball.adapters.adphotos;
@@ -21,7 +21,17 @@ public class dirigeants extends AppCompatActivity {
         setContentView(R.layout.activity_dirigeants);
         e.conext = this;
         r.d = this;
-        r.GetDirigeants();
+        Bundle datos = getIntent().getExtras();
+        if (datos!=null){
+            String id  = datos.getString("id");
+            if (id.equals("1")|| id.equals("3")){
+                r.GetDirigeants();
+            }else if (id.equals("4")){
+                r.GetSalles();
+            }
+
+        }
+
 
 
     }

@@ -1,15 +1,18 @@
 package com.handball.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.handball.R;
+import com.handball.activitys.showinfo;
 import com.handball.classes.clsdirigeants;
 import com.squareup.picasso.Picasso;
 
@@ -40,10 +43,24 @@ public class adpdirigeants extends RecyclerView.Adapter<adpdirigeants.MyViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull adpdirigeants.MyViewHolder myViewHolder, int i) {
+    public void onBindViewHolder(@NonNull adpdirigeants.MyViewHolder myViewHolder, final int i) {
         try {
             Picasso.with(c).load(mData.get(i).getImg()).into(myViewHolder.img);
             myViewHolder.txtnom.setText(mData.get(i).getNom());
+            myViewHolder.btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(c, showinfo.class);
+                    intent.putExtra("id", mData.get(i).getId());
+                    intent.putExtra("nom", mData.get(i).getNom());
+                    intent.putExtra("img", mData.get(i).getImg());
+                    intent.putExtra("email", mData.get(i).getEmail());
+                    intent.putExtra("idtype", mData.get(i).getIdtype());
+                    intent.putExtra("rol", mData.get(i).getRol());
+                    intent.putExtra("idclub", mData.get(i).getIdclub());
+                    c.startActivity(intent);
+                }
+            });
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -57,10 +74,12 @@ public class adpdirigeants extends RecyclerView.Adapter<adpdirigeants.MyViewHold
     public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView img;
         TextView txtnom;
+        Button btn;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             img = itemView.findViewById(R.id.img);
             txtnom = itemView.findViewById(R.id.txtnom);
+            btn = itemView.findViewById(R.id.btnclub);
         }
     }
 }

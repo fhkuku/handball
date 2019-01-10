@@ -1,7 +1,9 @@
 package com.handball.activitys;
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
 import com.handball.R;
 import com.handball.classes.activitys;
 import com.handball.classes.elements;
@@ -49,6 +51,14 @@ public class menu extends AppCompatActivity  {
             A.Club();
         }catch (Exception ex){
             ex.printStackTrace();
+        }
+    }
+
+    public void Contact(View v){
+        try {
+            A.Contact();
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
 

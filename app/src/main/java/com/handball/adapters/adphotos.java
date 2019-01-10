@@ -1,4 +1,5 @@
 package com.handball.adapters;
+
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -8,11 +9,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
 import com.handball.R;
+import com.handball.activitys.photo;
 import com.handball.activitys.photos;
 import com.handball.classes.clsphotos;
-import com.handball.activitys.photo;
 import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 public class adphotos extends RecyclerView.Adapter<adphotos.MyViewHolder> {

@@ -1,17 +1,22 @@
 package com.handball.classes;
+
 import android.content.Context;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.animation.Animation;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
+
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
@@ -19,8 +24,11 @@ import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import com.handball.activitys.photo;
 import com.loopj.android.http.RequestParams;
+import com.mapbox.mapboxsdk.maps.MapView;
 
 import java.util.HashMap;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class elements implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
 
@@ -38,12 +46,19 @@ public class elements implements BaseSliderView.OnSliderClickListener, ViewPager
     public photo p;
     public Bundle extras;
     public ImageView img, imgback;
-    public TextView txt;
+    public TextView txt, txtrol;
     public Animation animation;
     public LinearLayout bottom_menu_shared;
     public FloatingActionButton btnShared;
     public BottomSheetBehavior behavior;
     public RequestParams request;
+    public CircleImageView imgUser;
+    public ProgressBar progress;
+    public MapView m;
+    public ConstraintLayout content;
+    public CardView card;
+    public Button btn;
+    public static String KEY_MAP="pk.eyJ1IjoiZmVybmFuZG9rdWt1IiwiYSI6ImNqcXE2cXNkeTA4ZjUzeG4ydms2cXNtM3YifQ.GHeRI4ufTG9TjkSkP75I6Q";
 
 
 

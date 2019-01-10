@@ -7,16 +7,28 @@ public class clsdirigeants {
     private String img;
     private String email;
     private String idtype;
+    private String rol;
+    private String idclub;
+
+    public String getIdclub() {
+        return idclub;
+    }
+
+    public void setIdclub(String idclub) {
+        this.idclub = idclub;
+    }
 
     public clsdirigeants() {
     }
 
-    public clsdirigeants(String id, String nom, String img, String email, String idtype) {
+    public clsdirigeants(String id, String nom, String img, String email, String idtype, String rol, String idclub) {
         this.id = id;
         this.nom = nom;
         this.img = img;
         this.email = email;
         this.idtype = idtype;
+        this.rol = rol;
+        this.idclub = idclub;
     }
 
     public String getId() {
@@ -57,5 +69,13 @@ public class clsdirigeants {
 
     public void setIdtype(String idtype) {
         this.idtype = idtype;
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
     }
 }

@@ -3,6 +3,8 @@
     package="com.handball">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
@@ -12,7 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activitys.menu"></activity>
+        <meta-data
+            android:name="OnlineMaps.Key"
+            android:value="jTQUxKvKwVA9HZcfcMQeqZjSTvNVtlz0" />
+
+        <activity android:name=".activitys.menu" />
         <activity
             android:name=".activitys.photos"
             android:label="Photos" />
@@ -30,7 +36,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activitys.dirigeants" android:theme="@style/Themeactivity"></activity>
+        <activity
+            android:name=".activitys.dirigeants"
+            android:theme="@style/Themeactivity" />
+        <activity android:name=".activitys.showinfo" />
+        <activity android:name=".activitys.showinfoSalles" />
+        <activity android:name=".activitys.contact"></activity>
     </application>
 
 </manifest>

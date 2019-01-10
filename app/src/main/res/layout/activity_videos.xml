@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -25,21 +24,22 @@
             app:expandedTitleMarginEnd="64dp"
             >
 
-
-            <VideoView
-                android:id="@+id/idvideo"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
             <android.support.v7.widget.Toolbar
+                app:layout_collapseMode="pin"
                 android:id="@+id/toolbarvideos"
                 android:layout_width="match_parent"
                 app:titleTextColor="#fff"
                 android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
                 style="@style/ThemeOverlay.AppCompat.Light">
-
             </android.support.v7.widget.Toolbar>
+
+            <com.google.android.youtube.player.YouTubePlayerView
+                android:layout_width="match_parent"
+                android:id="@+id/idvideo"
+                android:layout_height="match_parent">
+            </com.google.android.youtube.player.YouTubePlayerView>
+
+
 
 
         </android.support.design.widget.CollapsingToolbarLayout>
