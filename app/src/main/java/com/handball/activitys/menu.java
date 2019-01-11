@@ -3,6 +3,7 @@ package com.handball.activitys;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Toast;
 
 import com.handball.R;
 import com.handball.classes.activitys;
@@ -57,6 +58,14 @@ public class menu extends AppCompatActivity  {
     public void Contact(View v){
         try {
             A.Contact();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void Equipes(View v){
+        try{
+            Toast.makeText(this,"Ojete", Toast.LENGTH_SHORT).show();
         }catch (Exception e){
             e.printStackTrace();
         }

@@ -2,6 +2,7 @@ package com.handball.classes;
 
 import android.content.Context;
 import android.content.Intent;
+import android.widget.Toast;
 
 import com.handball.activitys.club;
 import com.handball.activitys.menu;
@@ -62,8 +63,16 @@ public class activitys {
            }catch (Exception e){
                e.printStackTrace();
            }
+    }
 
 
+
+    public void Equipes(){
+           try{
+
+           }catch (Exception e){
+               e.printStackTrace();
+           }
     }
 
 

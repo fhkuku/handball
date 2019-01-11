@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
@@ -17,9 +18,11 @@ import com.handball.classes.request;
 public class videos extends YouTubeBaseActivity  implements YouTubePlayer.OnInitializedListener, YouTubePlayer.PlaybackEventListener {
 
     request r = new request();
+
+
     String claveYoutube = "AIzaSyBTPxawNOhM5__zxfDV647eLLQ-HNdhPME";
     YouTubePlayerView youTubePlayerView;
-    String url = "Li6jvab0mVg";
+    String url = "yZMrLEPMBLQ";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +40,10 @@ public class videos extends YouTubeBaseActivity  implements YouTubePlayer.OnInit
 
 
 
+
+
+
+
     }
 
 
@@ -50,7 +57,7 @@ public class videos extends YouTubeBaseActivity  implements YouTubePlayer.OnInit
         if (youTubeInitializationResult.isUserRecoverableError()) {
             youTubeInitializationResult.getErrorDialog(this, 1).show();
         } else {
-            String error = "error mija" + youTubeInitializationResult.toString();
+            String error = "error" + youTubeInitializationResult.toString();
             Toast.makeText(getApplicationContext(), error, Toast.LENGTH_LONG).show();
         }
     }

@@ -6,7 +6,7 @@
         <item name="colorPrimary">@color/newcolor</item>
         <item name="colorPrimaryDark">@color/newcolor</item>
         <item name="colorAccent">@color/newcolor</item>
-        <item name="android:windowTranslucentStatus">true</item>
+
     </style>
     <style name="StyleAppBar" parent="@android:style/TextAppearance.Medium">
         <item name="android:textSize">18sp</item>

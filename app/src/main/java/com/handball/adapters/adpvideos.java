@@ -22,7 +22,6 @@ public class adpvideos extends RecyclerView.Adapter<adpvideos.MyViewHolder> {
     Context c;
     ArrayList<clsvideos> mData;
 
-
     public adpvideos(Context c, ArrayList<clsvideos> mData){
         this.c = c;
         this.mData = mData;

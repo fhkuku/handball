@@ -32,7 +32,7 @@
         </com.daimajia.slider.library.SliderLayout>
 
         <android.support.v7.widget.Toolbar
-            android:layout_marginTop="15dp"
+            
             android:layout_width="match_parent"
             app:titleTextColor="#fff"
             android:layout_height="?attr/actionBarSize"
@@ -167,6 +167,7 @@
                 android:clickable="true"
                 android:layout_width="180dp"
                 android:id="@+id/btnequipes"
+                android:onClick="Equipes"
                 android:layout_height="170dp"
                 android:layout_margin="10dp">
 
@@ -218,7 +219,7 @@
                             android:layout_width="64dp"
                             android:layout_height="64dp"
                             android:background="@drawable/menu1"
-                            android:src="@drawable/ic_insert_photo_black_24dp"
+                            android:src="@drawable/contact"
                             android:padding="10dp"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -248,13 +249,13 @@
                             android:layout_height="64dp"
                             android:background="@drawable/menu1"
                             android:padding="10dp"
-                            android:src="@drawable/ic_insert_photo_black_24dp" />
+                            android:src="@drawable/par" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="Bookstore"
+                            android:text="Partenaires"
                             android:textStyle="bold" />
 
 
