@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "390436674504",
+    "firebase_url": "https://handballdanjoutin.firebaseio.com",
+    "project_id": "handballdanjoutin",
+    "storage_bucket": "handballdanjoutin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390436674504:android:38e3961ea1574708",
+        "android_client_info": {
+          "package_name": "com.handball"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "390436674504-mdsqbiq2ftojgebqabhgrnv24cflmepq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.handball",
+            "certificate_hash": "eff11e3fed5baf315116952997fb5a32eb0473d5"
+          }
+        },
+        {
+          "client_id": "390436674504-ck0n587cusjh5jdra93v0s3aojobc51g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7tRCbEJ8tIVj1w-G3CMjb1NH8Q2VMp7g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "390436674504-ck0n587cusjh5jdra93v0s3aojobc51g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
